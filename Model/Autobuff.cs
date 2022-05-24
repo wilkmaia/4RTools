@@ -151,5 +151,10 @@ namespace _4RTools.Model
         {
             return (key != Key.Back && key != Key.Escape && key != Key.None);
         }
+
+        public void Persist()
+        {
+            ProfileSingleton.SetConfiguration(this);
+        }
     }
 }
