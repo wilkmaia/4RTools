@@ -74,9 +74,14 @@ namespace _4RTools.Model
             {
                 bool foundQuag = false;
                 Dictionary<EffectStatusIDs, Key> bmClone = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
-                for (int i = 1; i < this.maxBuffListIndexSize - 1; i++)
+                for (int i = 1; i < this.maxBuffListIndexSize; i++)
                 {
                     uint currentStatus = c.CurrentBuffStatusCode(i);
+                    if (currentStatus > Constants.MAX_STATUS)
+                    {
+                        continue;
+                    }
+
                     EffectStatusIDs status = (EffectStatusIDs)currentStatus;
                     if (buffMapping.ContainsKey(status)) //CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                     {
@@ -84,7 +89,6 @@ namespace _4RTools.Model
                     }
 
                     if(status == EffectStatusIDs.QUAGMIRE) foundQuag = true;
-
                 }
                 foreach (var item in bmClone)
                 {

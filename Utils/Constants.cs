@@ -16,6 +16,7 @@ namespace _4RTools.Utils
         public const int WM_SYSKEYDOWN = 0x0104;
         public const int WM_SYSKEYUP = 0x0105;
         public const int WH_KEYBOARD_LL = 13;
+        public const int MAX_STATUS = 99999;
 
 
         public const int MINIMUM_HP_TO_RECOVER = 20;

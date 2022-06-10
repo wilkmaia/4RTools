@@ -5,6 +5,7 @@ namespace _4RTools.Utils
     [Flags]
     public enum EffectStatusIDs : uint
     {
+        //GENERIC
         POISON = 883,
         SILENCE = 885,
         BLIND = 887,
@@ -13,6 +14,7 @@ namespace _4RTools.Utils
         QUAGMIRE = 8,
         HALLUCINATIONWALK = 334,
         HALLUCINATION = 34, // Also known as Illusion
+        FALCON = 28,
 
         //BUFFS
         PROVOKE = 0,
@@ -53,6 +55,15 @@ namespace _4RTools.Utils
         AUTOBERSERK = 132,
         AURA_NINJA = 208,
         PEEL_CHANGE = 206,
+
+        // 3RD CLASSES
+        // ALL
+        // FULL_THROTTLE = 720, // TODO - understand why it's not working
+
+        // RANGER
+        // UNLIMIT = 722, // TODO - come up with a way of handling cooldown > skill duration
+        FEARBREEZE = 352,
+        // 3RD CLASSES END
 
         //ELEMENTAL CONVERTERS
         PROPERTYFIRE = 90,
